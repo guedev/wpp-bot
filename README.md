@@ -35,14 +35,14 @@ npm install
     <li>Substitua o número do contato pelo número que deseja enviar mensagens. Certifique-se de usar o formato internacional com @c.us no final:</li>
 </ul>
 
-```
+```javascript
 const contato = '5581999999999@c.us'; // Substitua pelo número desejado
 ```
 <ul>
     <li>Ajuste a mensagem e o horário conforme necessário:</li>
 </ul>
 
-```
+```javascript
 const mensagem = 'Bom dia! Essa é uma mensagem automática enviada pelo meu bot.';
 const horario = '51 15 * * *'; // Ajuste o horário para 15h51
 
@@ -66,7 +66,7 @@ O agendamento das mensagens utiliza a biblioteca [node-schedule](https://www.npm
 
 Adicione uma lista de contatos e itere sobre ela para enviar mensagens:
 
-```
+```javascript
 const contatos = ['5581999999999@c.us', '5581888888888@c.us'];
 contatos.forEach((contato) => {
   client.sendText(contato, mensagem);
